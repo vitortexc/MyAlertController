@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lni-cP-uwB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kjx-R7-JeS" customClass="MyAlertView" customModule="MyAlertController" customModuleProvider="target">
+                    <rect key="frame" x="234" y="472" width="300" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0A-5L-NhB">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmZ-I5-wZQ">
+                            <rect key="frame" x="0.0" y="40" width="300" height="40"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="FCg-JD-NTr"/>
+                                <constraint firstAttribute="height" constant="40" id="XYU-yz-wit"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="GEb-YR-XRf"/>
+                        <constraint firstItem="PmZ-I5-wZQ" firstAttribute="top" secondItem="Y0A-5L-NhB" secondAttribute="bottom" id="LXJ-6X-M7p"/>
+                        <constraint firstItem="Y0A-5L-NhB" firstAttribute="leading" secondItem="kjx-R7-JeS" secondAttribute="leading" id="O1M-Tj-uV3"/>
+                        <constraint firstAttribute="trailing" secondItem="Y0A-5L-NhB" secondAttribute="trailing" id="OgJ-Sv-F62"/>
+                        <constraint firstItem="Y0A-5L-NhB" firstAttribute="top" secondItem="kjx-R7-JeS" secondAttribute="top" id="RiP-6f-X5d"/>
+                        <constraint firstAttribute="trailing" secondItem="PmZ-I5-wZQ" secondAttribute="trailing" id="b9O-R9-Zhg"/>
+                        <constraint firstAttribute="width" constant="300" id="dpf-3z-U3f"/>
+                        <constraint firstItem="PmZ-I5-wZQ" firstAttribute="leading" secondItem="kjx-R7-JeS" secondAttribute="leading" id="mVQ-tx-OwO"/>
+                        <constraint firstAttribute="bottom" secondItem="PmZ-I5-wZQ" secondAttribute="bottom" id="tr3-b9-Vf4"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="actionsView" destination="PmZ-I5-wZQ" id="ZuV-YM-AQt"/>
+                        <outlet property="contentView" destination="Y0A-5L-NhB" id="k5h-8N-6mQ"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.35827803940000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="kjx-R7-JeS" firstAttribute="centerX" secondItem="lni-cP-uwB" secondAttribute="centerX" id="Pub-0O-j1N"/>
+                <constraint firstItem="kjx-R7-JeS" firstAttribute="centerY" secondItem="lni-cP-uwB" secondAttribute="centerY" id="Si6-Tg-d2R"/>
+            </constraints>
+            <point key="canvasLocation" x="62" y="48"/>
+        </view>
+    </objects>
+</document>
