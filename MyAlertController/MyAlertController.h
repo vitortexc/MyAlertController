@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FXBlurView.h"
 
 //! Project version number for MyAlertController.
 FOUNDATION_EXPORT double MyAlertControllerVersionNumber;

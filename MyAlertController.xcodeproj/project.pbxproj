@@ -10,11 +10,21 @@
 		6DBE93411E9580460028BCBB /* MyAlertController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DBE93371E9580460028BCBB /* MyAlertController.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6DBE93461E9580460028BCBB /* MyAlertControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBE93451E9580460028BCBB /* MyAlertControllerTests.swift */; };
 		6DBE93481E9580460028BCBB /* MyAlertController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBE933A1E9580460028BCBB /* MyAlertController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DC480171E958324005F25B3 /* MyAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC480151E958324005F25B3 /* MyAlertController.swift */; };
-		6DC480181E958324005F25B3 /* MyAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DC480161E958324005F25B3 /* MyAlertController.xib */; };
+		6DC480171E958324005F25B3 /* MyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC480151E958324005F25B3 /* MyAlert.swift */; };
+		7A2B2BF91EB918970099375E /* MyAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2BF81EB918970099375E /* MyAlertView.swift */; };
+		7A2B2BFB1EBA56DA0099375E /* MyAlertStandardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2BFA1EBA56DA0099375E /* MyAlertStandardViewController.swift */; };
+		7A2B2BFD1EBA57730099375E /* MyAlertStandardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2BFC1EBA57730099375E /* MyAlertStandardView.swift */; };
+		7A2B2BFF1EBA5E940099375E /* UIImageView+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2BFE1EBA5E940099375E /* UIImageView+Calculations.swift */; };
+		7A2B2C011EBA5F250099375E /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C001EBA5F250099375E /* UIView+Animations.swift */; };
+		7A2B2C031EBA89400099375E /* MyAlertTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C021EBA89400099375E /* MyAlertTransitionManager.swift */; };
+		7A2B2C061EBA8B0D0099375E /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A2B2C041EBA8B0D0099375E /* FXBlurView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A2B2C071EBA8B0D0099375E /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C051EBA8B0D0099375E /* FXBlurView.m */; };
+		7A2B2C091EBA8B370099375E /* MyAlertOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C081EBA8B370099375E /* MyAlertOverlayView.swift */; };
+		7A2B2C0C1EC0DD9B0099375E /* MyAlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C0B1EC0DD9B0099375E /* MyAlertContent.swift */; };
+		7ACB95481EC112240057953F /* MyAlertTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB95471EC112240057953F /* MyAlertTransitionAnimations.swift */; };
+		7ACB954A1EC112A30057953F /* MyAlertTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB95491EC112A30057953F /* MyAlertTransitionAnimator.swift */; };
+		7ACB954C1EC116BE0057953F /* MyAlert+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB954B1EC116BE0057953F /* MyAlert+Keyboard.swift */; };
 		7AF8A4F61E9D43D5008EBEE5 /* MyAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8A4F51E9D43D5008EBEE5 /* MyAlertAction.swift */; };
-		7AF8A4F81E9D4DFD008EBEE5 /* MyAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF8A4F71E9D4DFD008EBEE5 /* MyAlertView.swift */; };
-		7AF8A4FA1E9D54D1008EBEE5 /* MyAlertController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AF8A4F91E9D54D1008EBEE5 /* MyAlertController~ipad.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,11 +44,21 @@
 		6DBE93401E9580460028BCBB /* MyAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBE93451E9580460028BCBB /* MyAlertControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlertControllerTests.swift; sourceTree = "<group>"; };
 		6DBE93471E9580460028BCBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6DC480151E958324005F25B3 /* MyAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertController.swift; sourceTree = "<group>"; };
-		6DC480161E958324005F25B3 /* MyAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAlertController.xib; sourceTree = "<group>"; };
+		6DC480151E958324005F25B3 /* MyAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlert.swift; sourceTree = "<group>"; };
+		7A2B2BF81EB918970099375E /* MyAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertView.swift; sourceTree = "<group>"; };
+		7A2B2BFA1EBA56DA0099375E /* MyAlertStandardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertStandardViewController.swift; sourceTree = "<group>"; };
+		7A2B2BFC1EBA57730099375E /* MyAlertStandardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertStandardView.swift; sourceTree = "<group>"; };
+		7A2B2BFE1EBA5E940099375E /* UIImageView+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Calculations.swift"; sourceTree = "<group>"; };
+		7A2B2C001EBA5F250099375E /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		7A2B2C021EBA89400099375E /* MyAlertTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertTransitionManager.swift; sourceTree = "<group>"; };
+		7A2B2C041EBA8B0D0099375E /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		7A2B2C051EBA8B0D0099375E /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		7A2B2C081EBA8B370099375E /* MyAlertOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertOverlayView.swift; sourceTree = "<group>"; };
+		7A2B2C0B1EC0DD9B0099375E /* MyAlertContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertContent.swift; sourceTree = "<group>"; };
+		7ACB95471EC112240057953F /* MyAlertTransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertTransitionAnimations.swift; sourceTree = "<group>"; };
+		7ACB95491EC112A30057953F /* MyAlertTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertTransitionAnimator.swift; sourceTree = "<group>"; };
+		7ACB954B1EC116BE0057953F /* MyAlert+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAlert+Keyboard.swift"; sourceTree = "<group>"; };
 		7AF8A4F51E9D43D5008EBEE5 /* MyAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertAction.swift; sourceTree = "<group>"; };
-		7AF8A4F71E9D4DFD008EBEE5 /* MyAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertView.swift; sourceTree = "<group>"; };
-		7AF8A4F91E9D54D1008EBEE5 /* MyAlertController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MyAlertController~ipad.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +103,21 @@
 			children = (
 				6DBE933A1E9580460028BCBB /* MyAlertController.h */,
 				6DBE933B1E9580460028BCBB /* Info.plist */,
-				6DC480151E958324005F25B3 /* MyAlertController.swift */,
-				6DC480161E958324005F25B3 /* MyAlertController.xib */,
-				7AF8A4F91E9D54D1008EBEE5 /* MyAlertController~ipad.xib */,
+				6DC480151E958324005F25B3 /* MyAlert.swift */,
 				7AF8A4F51E9D43D5008EBEE5 /* MyAlertAction.swift */,
-				7AF8A4F71E9D4DFD008EBEE5 /* MyAlertView.swift */,
+				7ACB954B1EC116BE0057953F /* MyAlert+Keyboard.swift */,
+				7A2B2BF81EB918970099375E /* MyAlertView.swift */,
+				7A2B2BFA1EBA56DA0099375E /* MyAlertStandardViewController.swift */,
+				7A2B2BFC1EBA57730099375E /* MyAlertStandardView.swift */,
+				7A2B2BFE1EBA5E940099375E /* UIImageView+Calculations.swift */,
+				7A2B2C001EBA5F250099375E /* UIView+Animations.swift */,
+				7A2B2C021EBA89400099375E /* MyAlertTransitionManager.swift */,
+				7ACB95471EC112240057953F /* MyAlertTransitionAnimations.swift */,
+				7ACB95491EC112A30057953F /* MyAlertTransitionAnimator.swift */,
+				7A2B2C081EBA8B370099375E /* MyAlertOverlayView.swift */,
+				7A2B2C0B1EC0DD9B0099375E /* MyAlertContent.swift */,
+				7A2B2C041EBA8B0D0099375E /* FXBlurView.h */,
+				7A2B2C051EBA8B0D0099375E /* FXBlurView.m */,
 			);
 			path = MyAlertController;
 			sourceTree = "<group>";
@@ -108,6 +138,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2B2C061EBA8B0D0099375E /* FXBlurView.h in Headers */,
 				6DBE93481E9580460028BCBB /* MyAlertController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,8 +226,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DC480181E958324005F25B3 /* MyAlertController.xib in Resources */,
-				7AF8A4FA1E9D54D1008EBEE5 /* MyAlertController~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +243,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AF8A4F81E9D4DFD008EBEE5 /* MyAlertView.swift in Sources */,
-				6DC480171E958324005F25B3 /* MyAlertController.swift in Sources */,
+				7A2B2BF91EB918970099375E /* MyAlertView.swift in Sources */,
+				7A2B2C011EBA5F250099375E /* UIView+Animations.swift in Sources */,
+				7A2B2BFD1EBA57730099375E /* MyAlertStandardView.swift in Sources */,
+				7A2B2BFB1EBA56DA0099375E /* MyAlertStandardViewController.swift in Sources */,
+				7ACB95481EC112240057953F /* MyAlertTransitionAnimations.swift in Sources */,
+				7ACB954C1EC116BE0057953F /* MyAlert+Keyboard.swift in Sources */,
+				7ACB954A1EC112A30057953F /* MyAlertTransitionAnimator.swift in Sources */,
+				6DC480171E958324005F25B3 /* MyAlert.swift in Sources */,
+				7A2B2C031EBA89400099375E /* MyAlertTransitionManager.swift in Sources */,
+				7A2B2BFF1EBA5E940099375E /* UIImageView+Calculations.swift in Sources */,
 				7AF8A4F61E9D43D5008EBEE5 /* MyAlertAction.swift in Sources */,
+				7A2B2C091EBA8B370099375E /* MyAlertOverlayView.swift in Sources */,
+				7A2B2C0C1EC0DD9B0099375E /* MyAlertContent.swift in Sources */,
+				7A2B2C071EBA8B0D0099375E /* FXBlurView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Empresinha.MyAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -377,6 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Empresinha.MyAlertController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
