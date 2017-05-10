@@ -46,7 +46,7 @@ final public class MyAlert : UIViewController {
 	fileprivate var completion: (() -> Void)? = nil
 	
 	// MARK: Init methods
-	public convenience init(title: String?,	message: String?, icon: UIImage? = nil, actionAlignment: UILayoutConstraintAxis = .horizontal,transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView, UIView)->Void)? = nil, completion: (() -> Void)? = nil) {
+	public convenience init(title: String?,	message: String?, icon: UIImage? = nil, actionAlignment: UILayoutConstraintAxis = .horizontal,transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView)->Void)? = nil, completion: (() -> Void)? = nil) {
 		
 		let viewController = MyAlertStandardViewController()
 		viewController.titleText   = title
@@ -56,7 +56,7 @@ final public class MyAlert : UIViewController {
 		self.init(viewController: viewController, actionAlignment: actionAlignment, transitionStyle: transitionStyle, corenerRadius: corenerRadius, actionPadding: padding, configuration : configuration, completion: completion)
 	}
 	
-	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView, UIView)->Void)? = nil, completion: (() -> Void)? = nil) {
+	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {
 		
 		self.viewController = viewController
 		self.completion = completion
@@ -77,9 +77,19 @@ final public class MyAlert : UIViewController {
 		
 		if let stackView = alertView.actionView as? UIStackView {
 			stackView.axis = actionAlignment
+			switch stackView.axis {
+			case .horizontal:
+				stackView.alignment = .bottom
+				stackView.distribution = .fillEqually
+				break
+			case .vertical:
+				stackView.alignment = .fill
+				stackView.distribution = .fillProportionally
+				break
+			}
 		}
 		
-		configuration?(self.alertView.contentView, (self.alertView.stackView as! UIStackView).arrangedSubviews[0])
+		configuration?(self.alertView.contentView)
 	}
 	
 	required public init?(coder aDecoder: NSCoder) {
@@ -109,7 +119,7 @@ final public class MyAlert : UIViewController {
 	public override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
 		
-		self.alertView.contentSize = CGSize(width: self.alertView.frame.size.width, height: (self.alertView.auxView.frame.size.height))
+		self.alertView.contentSize = CGSize(width: self.alertView.frame.size.width, height: (self.alertView.auxView.frame.size.height + 30))
 		self.alertView.layoutIfNeededAnimated()
 		
 //		print(self.alertView.scrollView.contentSize)

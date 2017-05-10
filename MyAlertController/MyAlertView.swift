@@ -24,8 +24,6 @@ final public class MyAlertView: UIScrollView {
 	lazy var actionView: UIView = {
 		let buttonStackView = UIStackView()
 		buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-		buttonStackView.alignment = .fill
-		buttonStackView.distribution = .fillProportionally
 		buttonStackView.spacing = 0
 		return buttonStackView
 	}()
@@ -100,7 +98,7 @@ final public class MyAlertView: UIScrollView {
 		var constraints = [NSLayoutConstraint]()
 		
 		constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[auxView]|", options: [], metrics: nil, views: views)
-		constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|[auxView]", options: [], metrics: nil, views: views)
+		constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-(==30)-[auxView]", options: [], metrics: nil, views: views)
 		constraints += [NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .equal, toItem: contentView, attribute: .height, multiplier: 1, constant: 60)]
 //		self.auxViewHeightConstraint = NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: self.contentView, attribute: .height, multiplier: 1, constant: 0)
 //		constraints.append(self.auxViewHeightConstraint!)
