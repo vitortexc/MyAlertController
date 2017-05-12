@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MyAlertController"
-  s.version      = "0.0.2"
+  s.version      = "1.0.0"
   s.summary      = "Customize your alerts."
 
   # This description is used to generate tags and improve search results.
