@@ -120,7 +120,7 @@ public class MyAlertAction: UIButton {
 	}
 
 	// MARK: Init methods
-	public init(title: String, height: Int = 40, dismissOnTap: Bool, action: MyAlertActionCompletion?, configurationHandler: MyAlertActionConfiguration? = nil) {
+	public init(title: String, height: Int = 40, dismissOnTap: Bool, action: MyAlertActionCompletion?, withConfiguration configurationHandler: MyAlertActionConfiguration? = nil) {
 		
 		self.actionHeight = height
 		
@@ -128,7 +128,7 @@ public class MyAlertAction: UIButton {
 		
 		super.init(frame: .zero)
 		
-		self.configuration = configurationHandler ?? self.defaultConfiguration
+		self.configuration = configurationHandler
 		
 		self.setTitle(title, for: UIControlState())
 		self.actionBlock = action
@@ -164,6 +164,7 @@ public class MyAlertAction: UIButton {
 		
 		NSLayoutConstraint.activate(constraints)
 		
+		self.defaultConfiguration(self)
 		self.configuration?(self)
 	}
 }

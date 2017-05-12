@@ -40,23 +40,33 @@ final public class MyAlert : UIViewController {
 	}
 	
 	public var messages : [UILabel] {
-		get { return self.content.filter { $0 is UITextField } as! [UILabel] }
+		get { return self.content.filter { $0 is UILabel } as! [UILabel] }
+	}
+	
+	public var checkedCheckBoxes : [MyAlertCheckBox] {
+		get { return self.content.filter( { (thisView) -> Bool in
+			if let thisView = thisView as? MyAlertCheckBox, thisView.isChecked {
+				return true
+			}
+			return false
+		}) as! [MyAlertCheckBox]
+		}
 	}
 	
 	fileprivate var completion: (() -> Void)? = nil
 	
 	// MARK: Init methods
-	public convenience init(title: String?,	message: String?, icon: UIImage? = nil, actionAlignment: UILayoutConstraintAxis = .horizontal,transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView)->Void)? = nil, completion: (() -> Void)? = nil) {
+	public convenience init(title: String?,	message: String?, icon: UIImage? = nil, actionAlignment: UILayoutConstraintAxis = .horizontal,transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), completion: (() -> Void)? = nil) {
 		
 		let viewController = MyAlertStandardViewController()
 		viewController.titleText   = title
 		viewController.messageText = message
 		viewController.icon       = icon
 		
-		self.init(viewController: viewController, actionAlignment: actionAlignment, transitionStyle: transitionStyle, corenerRadius: corenerRadius, actionPadding: padding, configuration : configuration, completion: completion)
+		self.init(viewController: viewController, actionAlignment: actionAlignment, transitionStyle: transitionStyle, corenerRadius: corenerRadius, actionPadding: padding, completion: completion)
 	}
 	
-	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {
+	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), completion: (() -> Void)? = nil) {
 		
 		self.viewController = viewController
 		self.completion = completion
@@ -88,8 +98,6 @@ final public class MyAlert : UIViewController {
 				break
 			}
 		}
-		
-		configuration?(self.alertView.contentView)
 	}
 	
 	required public init?(coder aDecoder: NSCoder) {
@@ -120,9 +128,6 @@ final public class MyAlert : UIViewController {
 		super.viewDidLayoutSubviews()
 		
 		self.alertView.contentSize = CGSize(width: self.alertView.frame.size.width, height: (self.alertView.auxView.frame.size.height + 30))
-		self.alertView.layoutIfNeededAnimated()
-		
-//		print(self.alertView.scrollView.contentSize)
 	}
 	
 	deinit {
@@ -130,11 +135,19 @@ final public class MyAlert : UIViewController {
 		completion = nil
 	}
 	
-	// MARK: Our Methods
 	public func dismiss(_ completion: (() -> Void)? = nil) {
 		self.dismiss(animated: true) {
 			completion?()
 		}
+	}
+	
+	// MARK: Our Methods
+	
+	public final func configure(cornerRadius cr: CGFloat = 10, backgroundColor bgC: UIColor = .white, borderWidth bdW: CGFloat = 0, borderColor bdC: UIColor = .clear) {
+		self.alertView.backgroundColor = bgC
+		self.alertView.cornerRadius = cr
+		self.alertView.layer.borderColor = bdC.cgColor
+		self.alertView.layer.borderWidth = bdW
 	}
 	
 	fileprivate func appendContent() {
@@ -214,23 +227,19 @@ final public class MyAlert : UIViewController {
 		self.content.append(tableView)
 	}
 	
+	public func addCheckBox(_ text: String, style: MyAlertCheckBoxStyle = .rounded, withConfiguration config: ((MyAlertCheckBox) -> Void)? = nil) {
+		let checkBox = MyAlertCheckBox(text: text, style: style, withConfiguration : config)
+		checkBox.identifier = text
+		self.content.append(checkBox)
+		
+	}
+
 	@objc fileprivate func actionTapped(_ action: MyAlertAction) {
 		if action.dismissOnTap {
 			dismiss() { action.actionBlock?(action) }
 		} else {
 			action.actionBlock?(action)
 		}
-	}
-	
-	public func tapActionWithIndex(_ index: Int) {
-		let action = actions[index]
-		action.actionBlock?(action)
-	}
-	
-	public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		super.touchesBegan(touches, with: event)
-		
-		self.activeField?.resignFirstResponder()
 	}
 }
 
