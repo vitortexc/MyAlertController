@@ -21,6 +21,7 @@
 		7A2B2C071EBA8B0D0099375E /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C051EBA8B0D0099375E /* FXBlurView.m */; };
 		7A2B2C091EBA8B370099375E /* MyAlertOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C081EBA8B370099375E /* MyAlertOverlayView.swift */; };
 		7A2B2C0C1EC0DD9B0099375E /* MyAlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2B2C0B1EC0DD9B0099375E /* MyAlertContent.swift */; };
+		7AC37A0D1EC3AC3E00B061E4 /* MyAlertCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC37A0C1EC3AC3E00B061E4 /* MyAlertCheckBox.swift */; };
 		7ACB95481EC112240057953F /* MyAlertTransitionAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB95471EC112240057953F /* MyAlertTransitionAnimations.swift */; };
 		7ACB954A1EC112A30057953F /* MyAlertTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB95491EC112A30057953F /* MyAlertTransitionAnimator.swift */; };
 		7ACB954C1EC116BE0057953F /* MyAlert+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACB954B1EC116BE0057953F /* MyAlert+Keyboard.swift */; };
@@ -55,6 +56,7 @@
 		7A2B2C051EBA8B0D0099375E /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		7A2B2C081EBA8B370099375E /* MyAlertOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertOverlayView.swift; sourceTree = "<group>"; };
 		7A2B2C0B1EC0DD9B0099375E /* MyAlertContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertContent.swift; sourceTree = "<group>"; };
+		7AC37A0C1EC3AC3E00B061E4 /* MyAlertCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertCheckBox.swift; sourceTree = "<group>"; };
 		7ACB95471EC112240057953F /* MyAlertTransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertTransitionAnimations.swift; sourceTree = "<group>"; };
 		7ACB95491EC112A30057953F /* MyAlertTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertTransitionAnimator.swift; sourceTree = "<group>"; };
 		7ACB954B1EC116BE0057953F /* MyAlert+Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MyAlert+Keyboard.swift"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				7AF8A4F51E9D43D5008EBEE5 /* MyAlertAction.swift */,
 				7ACB954B1EC116BE0057953F /* MyAlert+Keyboard.swift */,
 				7A2B2BF81EB918970099375E /* MyAlertView.swift */,
+				7AC37A0C1EC3AC3E00B061E4 /* MyAlertCheckBox.swift */,
 				7A2B2BFA1EBA56DA0099375E /* MyAlertStandardViewController.swift */,
 				7A2B2BFC1EBA57730099375E /* MyAlertStandardView.swift */,
 				7A2B2BFE1EBA5E940099375E /* UIImageView+Calculations.swift */,
@@ -246,6 +249,7 @@
 			files = (
 				7A2B2BF91EB918970099375E /* MyAlertView.swift in Sources */,
 				7A2B2C011EBA5F250099375E /* UIView+Animations.swift in Sources */,
+				7AC37A0D1EC3AC3E00B061E4 /* MyAlertCheckBox.swift in Sources */,
 				7A2B2BFD1EBA57730099375E /* MyAlertStandardView.swift in Sources */,
 				7A2B2BFB1EBA56DA0099375E /* MyAlertStandardViewController.swift in Sources */,
 				7ACB95481EC112240057953F /* MyAlertTransitionAnimations.swift in Sources */,

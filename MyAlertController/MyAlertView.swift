@@ -5,12 +5,23 @@
 //  Created by Vitor Carrasco on 02/05/17.
 //  Copyright © 2017 Empresinha. All rights reserved.
 //
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 import UIKit
 
 final public class MyAlertView: UIScrollView {
 
 	internal let auxView : UIView
+	
+	override public var intrinsicContentSize: CGSize {
+		return CGSize(width: UIViewNoIntrinsicMetric, height: UIViewNoIntrinsicMetric)
+	}
 	
 	lazy var contentView: UIView = {
 		let container = UIView(frame: .zero)
@@ -25,6 +36,7 @@ final public class MyAlertView: UIScrollView {
 		let buttonStackView = UIStackView()
 		buttonStackView.translatesAutoresizingMaskIntoConstraints = false
 		buttonStackView.spacing = 0
+		buttonStackView.backgroundColor = .yellow
 		return buttonStackView
 	}()
 	
@@ -33,7 +45,7 @@ final public class MyAlertView: UIScrollView {
 		views.translatesAutoresizingMaskIntoConstraints = false
 		views.axis = .vertical
 		views.alignment = .center
-		views.distribution = .fillProportionally
+		views.distribution = .fill
 		views.spacing = 8
 		return views
 	}()
@@ -55,18 +67,14 @@ final public class MyAlertView: UIScrollView {
 		}
 	}
 	
-	public dynamic var cornerRadius : Float {
+	public dynamic var cornerRadius : CGFloat {
 		get {
-			return Float(self.contentView.layer.cornerRadius)
+			return self.contentView.layer.cornerRadius
 		}
 		set {
-			self.contentView.layer.cornerRadius = CGFloat(newValue)
+			self.contentView.layer.cornerRadius = newValue
 		}
 	}
-	
-//	internal var auxViewHeightConstraint: NSLayoutConstraint? = nil
-	
-	internal var distanceMoved : CGFloat = 0
 	
 	// MARK: Inital setup methods
 	
@@ -76,6 +84,7 @@ final public class MyAlertView: UIScrollView {
 		
 		super.init(frame: frame)
 		self.isScrollEnabled = true
+		self.showsVerticalScrollIndicator = false
 		
 		setupViews()
 	}
@@ -93,15 +102,16 @@ final public class MyAlertView: UIScrollView {
 		auxView.addSubview(contentView)
 		contentView.addSubview(stackView)
 		
-		
 		let views = ["self": self,"auxView": auxView, "content": contentView, "stackView": stackView]
 		var constraints = [NSLayoutConstraint]()
 		
+		let auxCons = NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: self, attribute: .height, multiplier: 1, constant: -30)
+		auxCons.priority = 1000
+		
 		constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[auxView]|", options: [], metrics: nil, views: views)
 		constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-(==30)-[auxView]", options: [], metrics: nil, views: views)
-		constraints += [NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .equal, toItem: contentView, attribute: .height, multiplier: 1, constant: 60)]
-//		self.auxViewHeightConstraint = NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: self.contentView, attribute: .height, multiplier: 1, constant: 0)
-//		constraints.append(self.auxViewHeightConstraint!)
+		constraints += [auxCons]
+		constraints += [NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: contentView, attribute: .height, multiplier: 1, constant: 30)]
 		
 		constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-(>=10,==20@900)-[content(<=340,>=300)]-(>=10,==20@900)-|", options: [], metrics: nil, views: views)
 		constraints += [NSLayoutConstraint(item: contentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)]
