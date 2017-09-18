@@ -20,7 +20,7 @@ final public class MyAlert : UIViewController {
 	
 	// MARK: Content properties
 	
-	public var viewController : UIViewController
+	public var viewController : MyAlertStandardViewController
 	
 	internal var alertView : MyAlertView {
 		get {
@@ -56,7 +56,7 @@ final public class MyAlert : UIViewController {
 		self.init(viewController: viewController, actionAlignment: actionAlignment, transitionStyle: transitionStyle, corenerRadius: corenerRadius, actionPadding: padding, configuration : configuration, completion: completion)
 	}
 	
-	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {
+	public init(viewController: MyAlertStandardViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {
 		
 		self.viewController = viewController
 		self.completion = completion
