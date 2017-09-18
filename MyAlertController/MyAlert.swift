@@ -27,7 +27,7 @@ final public class MyAlert : UIViewController {
 	
 	// MARK: Content properties
 	
-	public var viewController : MyAlertStandardViewController
+	public var viewController : UIViewController
 	
 	internal var alertView : MyAlertView {
 		get {
