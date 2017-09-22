@@ -73,8 +73,7 @@ final public class MyAlert : UIViewController {
 		self.init(viewController: viewController, actionAlignment: actionAlignment, transitionStyle: transitionStyle, corenerRadius: corenerRadius, actionPadding: padding, completion: completion)
 	}
 	
-	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), completion: (() -> Void)? = nil) {
-		
+	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0),configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {	
 		self.viewController = viewController
 		self.completion = completion
 		self.padding = padding
