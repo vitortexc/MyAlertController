@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MyAlertController"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Customize your alerts."
 
   # This description is used to generate tags and improve search results.
@@ -105,7 +105,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
-  s.resources = "MyAlertController/**/*.{xib,storyboard}"
+  #s.resources = "MyAlertController/**/*.{xib,storyboard}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
