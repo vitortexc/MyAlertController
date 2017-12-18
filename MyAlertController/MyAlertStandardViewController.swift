@@ -50,7 +50,7 @@ final public class MyAlertStandardViewController: UIViewController {
 		}
 	}
 	
-	public dynamic var titleFont: UIFont {
+	@objc public dynamic var titleFont: UIFont {
 		get { return defaultView.titleFont }
 		set {
 			defaultView.titleFont = newValue
@@ -58,7 +58,7 @@ final public class MyAlertStandardViewController: UIViewController {
 		}
 	}
 	
-	public dynamic var titleColor: UIColor? {
+	@objc public dynamic var titleColor: UIColor? {
 		get { return defaultView.titleLabel.textColor }
 		set {
 			defaultView.titleColor = newValue
@@ -66,7 +66,7 @@ final public class MyAlertStandardViewController: UIViewController {
 		}
 	}
 	
-	public dynamic var titleTextAlignment: NSTextAlignment {
+	@objc public dynamic var titleTextAlignment: NSTextAlignment {
 		get { return defaultView.titleTextAlignment }
 		set {
 			defaultView.titleTextAlignment = newValue
@@ -83,7 +83,7 @@ final public class MyAlertStandardViewController: UIViewController {
 		}
 	}
 	
-	public dynamic var messageFont: UIFont {
+	@objc public dynamic var messageFont: UIFont {
 		get { return defaultView.messageFont}
 		set {
 			defaultView.messageFont = newValue
@@ -91,7 +91,7 @@ final public class MyAlertStandardViewController: UIViewController {
 		}
 	}
 	
-	public dynamic var messageColor: UIColor? {
+	@objc public dynamic var messageColor: UIColor? {
 		get { return defaultView.messageColor }
 		set {
 			defaultView.messageColor = newValue
@@ -99,7 +99,7 @@ final public class MyAlertStandardViewController: UIViewController {
 		}
 	}
 	
-	public dynamic var messageTextAlignment: NSTextAlignment {
+	@objc public dynamic var messageTextAlignment: NSTextAlignment {
 		get { return defaultView.messageTextAlignment }
 		set {
 			defaultView.messageTextAlignment = newValue

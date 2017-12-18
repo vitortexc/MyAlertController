@@ -38,7 +38,7 @@ public class MyAlertAction: UIButton {
 		return newView
 	}()
 	
-	internal dynamic var configuration : MyAlertActionConfiguration?
+	@objc internal dynamic var configuration : MyAlertActionConfiguration?
 	open var dismissOnTap = true
 	
 	open override var isHighlighted: Bool {
@@ -71,33 +71,33 @@ public class MyAlertAction: UIButton {
 	open fileprivate(set) var actionBlock: MyAlertActionCompletion?
 	
 	// Title properties
-	open dynamic var title : String? {
+	@objc open dynamic var title : String? {
 		get { return self.titleLabel?.text }
 		set { self.titleLabel?.text = newValue }
 	}
 	
-	open dynamic var titleFont: UIFont? {
+	@objc open dynamic var titleFont: UIFont? {
 		get { return titleLabel?.font }
 		set { titleLabel?.font = newValue }
 	}
 	
-	open dynamic var titleColor: UIColor? {
+	@objc open dynamic var titleColor: UIColor? {
 		get { return self.titleColor(for: UIControlState()) }
 		set { setTitleColor(newValue, for: UIControlState()) }
 	}
 	
 	// Action properties
-	open dynamic var action : ((MyAlertAction) -> Void)?
+	@objc open dynamic var action : ((MyAlertAction) -> Void)?
 	
-	open dynamic var actionHeight : Int
+	@objc open dynamic var actionHeight : Int
 	
-	open dynamic var bgColor: UIColor? {
+	@objc open dynamic var bgColor: UIColor? {
 		get { return backgroundColor }
 		set { backgroundColor = newValue }
 	}
 	
 	// Separator properties
-	open dynamic var separatorColor: UIColor? {
+	@objc open dynamic var separatorColor: UIColor? {
 		get { return separator.backgroundColor }
 		set {
 			separator.backgroundColor = newValue

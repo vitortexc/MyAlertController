@@ -29,7 +29,7 @@ public class MyAlertCheckBox: UIView {
 	// MARK: Properties
 	public var identifier : String?
 	
-	internal dynamic var configuration : MyAlertCheckBoxConfiguration?
+	@objc internal dynamic var configuration : MyAlertCheckBoxConfiguration?
 	internal var isChecked : Bool {
 		get { return !self.checkBoxTick.isHidden}
 		set {
@@ -82,22 +82,22 @@ public class MyAlertCheckBox: UIView {
 	}
 	
 	// Title properties
-	open dynamic var text : String? {
+	@objc open dynamic var text : String? {
 		get { return self.textLabel.text }
 		set { self.textLabel.text = newValue }
 	}
 	
-	open dynamic var textFont: UIFont? {
+	@objc open dynamic var textFont: UIFont? {
 		get { return textLabel.font }
 		set { textLabel.font = newValue }
 	}
 	
-	open dynamic var textColor: UIColor? {
+	@objc open dynamic var textColor: UIColor? {
 		get { return self.textColor }
 		set { self.textLabel.textColor = newValue }
 	}
 	
-	open dynamic var bgColor: UIColor? {
+	@objc open dynamic var bgColor: UIColor? {
 		get { return backgroundColor }
 		set { backgroundColor = newValue }
 	}

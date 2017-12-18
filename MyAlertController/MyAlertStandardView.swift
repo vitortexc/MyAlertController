@@ -50,33 +50,33 @@ final public class MyAlertStandardView: UIView {
 	
 	
 	// Title properties
-	public dynamic var titleFont: UIFont {
+	@objc public dynamic var titleFont: UIFont {
 		get { return titleLabel.font }
 		set { titleLabel.font = newValue }
 	}
 	
-	public dynamic var titleColor: UIColor? {
+	@objc public dynamic var titleColor: UIColor? {
 		get { return titleLabel.textColor }
 		set { titleLabel.textColor = newValue }
 	}
 	
-	public dynamic var titleTextAlignment: NSTextAlignment {
+	@objc public dynamic var titleTextAlignment: NSTextAlignment {
 		get { return titleLabel.textAlignment }
 		set { titleLabel.textAlignment = newValue }
 	}
 	
 	// Message properties
-	public dynamic var messageFont: UIFont {
+	@objc public dynamic var messageFont: UIFont {
 		get { return messageLabel.font }
 		set { messageLabel.font = newValue }
 	}
 	
-	public dynamic var messageColor: UIColor? {
+	@objc public dynamic var messageColor: UIColor? {
 		get { return messageLabel.textColor }
 		set { messageLabel.textColor = newValue}
 	}
 	
-	public dynamic var messageTextAlignment: NSTextAlignment {
+	@objc public dynamic var messageTextAlignment: NSTextAlignment {
 		get { return messageLabel.textAlignment }
 		set { messageLabel.textAlignment = newValue }
 	}

@@ -67,7 +67,7 @@ final public class MyAlertView: UIScrollView {
 		}
 	}
 	
-	public dynamic var cornerRadius : CGFloat {
+	@objc public dynamic var cornerRadius : CGFloat {
 		get {
 			return self.contentView.layer.cornerRadius
 		}
@@ -106,7 +106,7 @@ final public class MyAlertView: UIScrollView {
 		var constraints = [NSLayoutConstraint]()
 		
 		let auxCons = NSLayoutConstraint(item: auxView, attribute: .height, relatedBy: .greaterThanOrEqual, toItem: self, attribute: .height, multiplier: 1, constant: -30)
-		auxCons.priority = 1000
+		auxCons.priority = UILayoutPriority(rawValue: 1000)
 		
 		constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[auxView]|", options: [], metrics: nil, views: views)
 		constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-(==30)-[auxView]", options: [], metrics: nil, views: views)
