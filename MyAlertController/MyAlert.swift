@@ -49,6 +49,10 @@ final public class MyAlert : UIViewController {
 	public var messages : [UILabel] {
 		get { return self.content.filter { $0 is UILabel } as! [UILabel] }
 	}
+    
+    public var views : [UIView] {
+        get { return self.content.filter { $0 is UIView } }
+    }
 	
 	public var checkedCheckBoxes : [MyAlertCheckBox] {
 		get { return self.content.filter( { (thisView) -> Bool in
@@ -232,6 +236,10 @@ final public class MyAlert : UIViewController {
 	public func addTableView(_ tableView: UITableView) {
 		self.content.append(tableView)
 	}
+    
+    public func addView(_ view: UIView) {
+        self.content.append(view)
+    }
 	
 	public func addCheckBox(_ text: String, style: MyAlertCheckBoxStyle = .rounded, withConfiguration config: ((MyAlertCheckBox) -> Void)? = nil) {
 		let checkBox = MyAlertCheckBox(text: text, style: style, withConfiguration : config)
