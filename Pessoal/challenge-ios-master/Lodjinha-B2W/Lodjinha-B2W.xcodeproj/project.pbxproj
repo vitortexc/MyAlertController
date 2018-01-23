@@ -18,6 +18,16 @@
 		9DECE4BC20173BA500F5B1FB /* ProdutoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4BA20173BA500F5B1FB /* ProdutoViewCell.swift */; };
 		9DECE4BD20173BA500F5B1FB /* ProdutoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DECE4BB20173BA500F5B1FB /* ProdutoViewCell.xib */; };
 		9DECE4BF2017409E00F5B1FB /* CategoriaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4BE2017409E00F5B1FB /* CategoriaViewCell.swift */; };
+		9DECE4C22017496900F5B1FB /* HomeViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4C12017496900F5B1FB /* HomeViewControllerExtension.swift */; };
+		9DECE4C420175CD000F5B1FB /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4C320175CD000F5B1FB /* ModelManager.swift */; };
+		9DECE4C620175DD600F5B1FB /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4C520175DD600F5B1FB /* Banner.swift */; };
+		9DECE4C820175F5200F5B1FB /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4C720175F5200F5B1FB /* Categoria.swift */; };
+		9DECE4CA2017607900F5B1FB /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4C92017607900F5B1FB /* Produto.swift */; };
+		9DECE4CC201762C900F5B1FB /* LodjinhaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4CB201762C900F5B1FB /* LodjinhaAPI.swift */; };
+		9DECE4CF20178CC400F5B1FB /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4CE20178CC400F5B1FB /* SobreViewController.swift */; };
+		9DECE4D120178D4B00F5B1FB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4D020178D4B00F5B1FB /* DateExtension.swift */; };
+		9DECE4D320178DF500F5B1FB /* ListaProdutoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4D220178DF500F5B1FB /* ListaProdutoTableViewController.swift */; };
+		9DECE4D52017955200F5B1FB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DECE4D42017955200F5B1FB /* DetailsViewController.swift */; };
 		D1F24B8CA790C1A24A2C0249 /* Pods_Lodjinha_B2WTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B35EB99746BA1F1B237265 /* Pods_Lodjinha_B2WTests.framework */; };
 		ED48F9D90AD21ACDF992B4EC /* Pods_Lodjinha_B2W.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEC2C62343B249D27C246FA /* Pods_Lodjinha_B2W.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +72,17 @@
 		9DECE4BA20173BA500F5B1FB /* ProdutoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoViewCell.swift; sourceTree = "<group>"; };
 		9DECE4BB20173BA500F5B1FB /* ProdutoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProdutoViewCell.xib; sourceTree = "<group>"; };
 		9DECE4BE2017409E00F5B1FB /* CategoriaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriaViewCell.swift; sourceTree = "<group>"; };
+		9DECE4C12017496900F5B1FB /* HomeViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerExtension.swift; sourceTree = "<group>"; };
+		9DECE4C320175CD000F5B1FB /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		9DECE4C520175DD600F5B1FB /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		9DECE4C720175F5200F5B1FB /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
+		9DECE4C92017607900F5B1FB /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
+		9DECE4CB201762C900F5B1FB /* LodjinhaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodjinhaAPI.swift; sourceTree = "<group>"; };
+		9DECE4CD2017647700F5B1FB /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		9DECE4CE20178CC400F5B1FB /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		9DECE4D020178D4B00F5B1FB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		9DECE4D220178DF500F5B1FB /* ListaProdutoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProdutoTableViewController.swift; sourceTree = "<group>"; };
+		9DECE4D42017955200F5B1FB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		A0473DD2BC43B126F5407528 /* Pods-Lodjinha-B2WTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lodjinha-B2WTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lodjinha-B2WTests/Pods-Lodjinha-B2WTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFEC2C62343B249D27C246FA /* Pods_Lodjinha_B2W.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lodjinha_B2W.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A192E85467919717911F57 /* Pods_Lodjinha_B2WUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lodjinha_B2WUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +164,7 @@
 		6D4A39702016318200E855B4 /* Lodjinha-B2W */ = {
 			isa = PBXGroup;
 			children = (
+				9DECE4C02017494400F5B1FB /* Extension */,
 				9DECE4B9201738D400F5B1FB /* Cell */,
 				9DECE4B82017301B00F5B1FB /* ViewController */,
 				9DECE4B72017301500F5B1FB /* API */,
@@ -152,6 +174,7 @@
 				6D4A39782016318200E855B4 /* Assets.xcassets */,
 				6D4A397A2016318200E855B4 /* LaunchScreen.storyboard */,
 				6D4A397D2016318200E855B4 /* Info.plist */,
+				9DECE4CD2017647700F5B1FB /* Pacifico-Regular.ttf */,
 			);
 			path = "Lodjinha-B2W";
 			sourceTree = "<group>";
@@ -177,6 +200,10 @@
 		9DECE4B62017300D00F5B1FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9DECE4C320175CD000F5B1FB /* ModelManager.swift */,
+				9DECE4C520175DD600F5B1FB /* Banner.swift */,
+				9DECE4C720175F5200F5B1FB /* Categoria.swift */,
+				9DECE4C92017607900F5B1FB /* Produto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +211,7 @@
 		9DECE4B72017301500F5B1FB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				9DECE4CB201762C900F5B1FB /* LodjinhaAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -192,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				6D4A39732016318200E855B4 /* HomeViewController.swift */,
+				9DECE4CE20178CC400F5B1FB /* SobreViewController.swift */,
+				9DECE4D220178DF500F5B1FB /* ListaProdutoTableViewController.swift */,
+				9DECE4D42017955200F5B1FB /* DetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -204,6 +235,15 @@
 				9DECE4BE2017409E00F5B1FB /* CategoriaViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9DECE4C02017494400F5B1FB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9DECE4C12017496900F5B1FB /* HomeViewControllerExtension.swift */,
+				9DECE4D020178D4B00F5B1FB /* DateExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,9 +491,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lodjinha-B2W/Pods-Lodjinha-B2W-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,9 +547,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DECE4BF2017409E00F5B1FB /* CategoriaViewCell.swift in Sources */,
+				9DECE4D320178DF500F5B1FB /* ListaProdutoTableViewController.swift in Sources */,
+				9DECE4D120178D4B00F5B1FB /* DateExtension.swift in Sources */,
+				9DECE4C820175F5200F5B1FB /* Categoria.swift in Sources */,
+				9DECE4CA2017607900F5B1FB /* Produto.swift in Sources */,
+				9DECE4C22017496900F5B1FB /* HomeViewControllerExtension.swift in Sources */,
 				6D4A39742016318200E855B4 /* HomeViewController.swift in Sources */,
 				6D4A39722016318200E855B4 /* AppDelegate.swift in Sources */,
+				9DECE4C620175DD600F5B1FB /* Banner.swift in Sources */,
+				9DECE4CF20178CC400F5B1FB /* SobreViewController.swift in Sources */,
+				9DECE4CC201762C900F5B1FB /* LodjinhaAPI.swift in Sources */,
+				9DECE4D52017955200F5B1FB /* DetailsViewController.swift in Sources */,
 				9DECE4BC20173BA500F5B1FB /* ProdutoViewCell.swift in Sources */,
+				9DECE4C420175CD000F5B1FB /* ModelManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +727,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NBD68U8QX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Lodjinha-B2W/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Empresinha.Lodjinha-B2W";
@@ -684,7 +743,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7NBD68U8QX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Lodjinha-B2W/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Empresinha.Lodjinha-B2W";

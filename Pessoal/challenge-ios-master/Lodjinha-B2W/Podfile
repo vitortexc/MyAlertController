@@ -4,6 +4,10 @@
 target 'Lodjinha-B2W' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  
+  pod 'Alamofire', '~> 4.6.0'
+  pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'AlamofireImage', '~> 3.2'
 
   # Pods for Lodjinha-B2W
 
