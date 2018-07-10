@@ -9,7 +9,7 @@ Here you find information about the classes and some usage examples.
 * Smilar to Swift AlertController
 * Some extra Items (TableView, CheckBox...)
 * Easy to customize appearence
-* Base Icon-Title-Message alert
+* Basic Icon-Title-Message alert
 * Support custom view controller
 * Working on all screen sizes
 
@@ -18,7 +18,7 @@ Here you find information about the classes and some usage examples.
 
 ## Cocoapods
 ### Initiating pods in your project
-If you don't initilized Cocoapods in your project, just open terminal and type the following:
+If you didn't initialized Cocoapods in your project, just open terminal and type the following:
 
 ```ruby
 cd <YOUR-PROJECT-PATH>
@@ -31,7 +31,7 @@ This will create a file named **Podfile**.
 Open Podfile with a text editor and add the following:
 
 ```ruby
-pod 'MyAlertController', :git => 'https://github.com/vitortexc/MyAlertController.git'
+pod 'MyAlertController', :git => 'https://github.com/vTexc/MyAlertController.git'
 ```
 
 On terminal, do the following:
