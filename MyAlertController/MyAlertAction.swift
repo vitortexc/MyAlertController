@@ -54,7 +54,7 @@ public class MyAlertAction: UIButton {
 	open var defaultBorderColor = UIColor(white: 0.9, alpha: 1)
 	
 	private let defaultConfiguration : MyAlertActionConfiguration = {(action) in
-		action.setTitleColor(action.defaultTitleColor, for: UIControlState())
+        action.setTitleColor(action.defaultTitleColor, for: UIControl.State())
 		action.titleLabel?.font = action.defaultTitleFont
 		action.backgroundColor = action.defaultButtonColor
 		action.separator.backgroundColor = action.defaultSeparatorColor
@@ -82,8 +82,8 @@ public class MyAlertAction: UIButton {
 	}
 	
 	@objc open dynamic var titleColor: UIColor? {
-		get { return self.titleColor(for: UIControlState()) }
-		set { setTitleColor(newValue, for: UIControlState()) }
+        get { return self.titleColor(for: UIControl.State()) }
+        set { setTitleColor(newValue, for: UIControl.State()) }
 	}
 	
 	// Action properties
@@ -137,7 +137,7 @@ public class MyAlertAction: UIButton {
 		
 		self.configuration = configurationHandler
 		
-		self.setTitle(title, for: UIControlState())
+        self.setTitle(title, for: UIControl.State())
 		self.actionBlock = action
 		
 		self.dismissOnTap = dismissOnTap

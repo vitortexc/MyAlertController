@@ -67,7 +67,7 @@ final public class MyAlert : UIViewController {
 	fileprivate var completion: (() -> Void)? = nil
 	
 	// MARK: Init methods
-	public convenience init(title: String?,	message: String?, icon: UIImage? = nil, actionAlignment: UILayoutConstraintAxis = .horizontal,transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), completion: (() -> Void)? = nil) {
+    public convenience init(title: String?,	message: String?, icon: UIImage? = nil, actionAlignment: NSLayoutConstraint.Axis = .horizontal,transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0), completion: (() -> Void)? = nil) {
 		
 		let viewController = MyAlertStandardViewController()
 		viewController.titleText   = title
@@ -77,7 +77,7 @@ final public class MyAlert : UIViewController {
 		self.init(viewController: viewController, actionAlignment: actionAlignment, transitionStyle: transitionStyle, corenerRadius: corenerRadius, actionPadding: padding, completion: completion)
 	}
 	
-	public init(viewController: UIViewController, actionAlignment: UILayoutConstraintAxis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0),configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {	
+    public init(viewController: UIViewController, actionAlignment: NSLayoutConstraint.Axis = .horizontal, transitionStyle: MyAlertTransitionStyle = .bounceUp, corenerRadius: CGFloat = 10, actionPadding padding: (top: Int, bottom: Int, left: Int, right: Int) = (0,0,0,0),configuration : ((UIView) -> Void)? = nil, completion: (() -> Void)? = nil) {	
 		self.viewController = viewController
 		self.completion = completion
 		self.padding = padding
@@ -90,9 +90,9 @@ final public class MyAlert : UIViewController {
 		modalPresentationStyle = .custom
 		
 		if let stackView = alertView.viewsView as? UIStackView {
-			addChildViewController(viewController)
+            addChild(viewController)
 			stackView.insertArrangedSubview(viewController.view, at: 0)
-			viewController.didMove(toParentViewController: self)
+            viewController.didMove(toParent: self)
 		}
 		
 		if let stackView = alertView.actionView as? UIStackView {

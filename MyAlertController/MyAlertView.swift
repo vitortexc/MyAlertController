@@ -20,7 +20,7 @@ final public class MyAlertView: UIScrollView {
 	internal let auxView : UIView
 	
 	override public var intrinsicContentSize: CGSize {
-		return CGSize(width: UIViewNoIntrinsicMetric, height: UIViewNoIntrinsicMetric)
+        return CGSize(width: UIView.noIntrinsicMetric, height: UIView.noIntrinsicMetric)
 	}
 	
 	lazy var contentView: UIView = {

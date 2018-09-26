@@ -18,19 +18,19 @@ import UIKit
 extension MyAlert: UITextFieldDelegate {
 	// MARK: Internal methods
 	internal func addObservers() {
-		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: .UIKeyboardWillShow, object: view.window)
-		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: view.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: view.window)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: view.window)
 	}
 	
 	internal func removeObservers() {
-		NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillShow, object: view.window)
-		NotificationCenter.default.removeObserver(self, name: .UIKeyboardWillHide, object: view.window)
+		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: view.window)
+		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: view.window)
 	}
 	
 	@objc private func keyboardWillHide(_ notification: Notification) {
 		var info = notification.userInfo!
-		let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
-		let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, -keyboardSize!.height, 0.0)
+        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: -keyboardSize!.height, right: 0.0)
 		self.alertView.contentInset = contentInsets
 		self.alertView.scrollIndicatorInsets = contentInsets
 		self.view.endEditing(true)
@@ -38,8 +38,8 @@ extension MyAlert: UITextFieldDelegate {
 	
 	@objc private func keyboardWillShow(_ notification: Notification) {
 		var info = notification.userInfo!
-		let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
-		let contentInsets : UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize!.height, 0.0)
+        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
+        let contentInsets : UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize!.height, right: 0.0)
 		
 		self.alertView.contentInset = contentInsets
 		self.alertView.scrollIndicatorInsets = contentInsets
