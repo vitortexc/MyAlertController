@@ -1,6 +1,0 @@
-framework module Pods_Lodjinha_B2WUITests {
-  umbrella header "Pods-Lodjinha-B2WUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
