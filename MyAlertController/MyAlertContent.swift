@@ -16,7 +16,7 @@
 import UIKit
 
 internal extension UIView {
-	@objc internal func setupView() {
+    @objc func setupView() {
 		self.translatesAutoresizingMaskIntoConstraints = false
 		
 		var auxHeight : CGFloat = 0

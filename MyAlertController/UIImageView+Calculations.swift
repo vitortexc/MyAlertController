@@ -17,7 +17,7 @@ import UIKit
 
 internal extension UIImageView {
 	
-	internal func heightLimited(to height: CGFloat) -> CGFloat {
+    func heightLimited(to height: CGFloat) -> CGFloat {
 		guard let image = image, image.size.height > 0 else {
 			return 0.0
 		}
@@ -25,7 +25,7 @@ internal extension UIImageView {
 		return height * ratio
 	}
 	
-	internal func heightWithRatio() -> CGFloat {
+    func heightWithRatio() -> CGFloat {
 		guard let image = image, image.size.height > 0 else {
 			return 0.0
 		}

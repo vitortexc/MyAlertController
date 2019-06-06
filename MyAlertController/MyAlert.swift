@@ -106,7 +106,9 @@ final public class MyAlert : UIViewController {
 				stackView.alignment = .fill
 				stackView.distribution = .fillProportionally
 				break
-			}
+            @unknown default:
+                break
+            }
 		}
 	}
 	
